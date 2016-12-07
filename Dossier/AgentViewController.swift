@@ -14,39 +14,18 @@ class AgentViewController: UIViewController {
     @IBOutlet var agentKnownAssociates: UILabel!
     @IBOutlet var agentOccupation: UILabel!
     @IBOutlet var agentLanguagesKnown: UILabel!
-    var agent1 : Dossier!
-    var agent2 : Dossier!
-    var agent3 : Dossier!
-    var agent : String!
-    var organization : Organization!
+
+    var agent : Dossier!
     
     override func viewDidLoad() {
         
-        switch agent {
-        case "Sterling Archer":
-            let currentAgent = organization.operatives[0]
-            agentName.text = currentAgent.name
-            agentLastKnownLocation.text = currentAgent.lastKnownLocation
-            agentKnownAssociates.text = currentAgent.knownAssociates
-            agentOccupation.text = currentAgent.occupation
-            agentLanguagesKnown.text = currentAgent.languagesSpoken
-        case "Sir Austin Danger Powers":
-            let currentAgent = organization.operatives[1]
-            agentName.text = currentAgent.name
-            agentLastKnownLocation.text = currentAgent.lastKnownLocation
-            agentKnownAssociates.text = currentAgent.knownAssociates
-            agentOccupation.text = currentAgent.occupation
-            agentLanguagesKnown.text = currentAgent.languagesSpoken
-        case "James Bond":
-            let currentAgent = organization.operatives[2]
-            agentName.text = currentAgent.name
-            agentLastKnownLocation.text = currentAgent.lastKnownLocation
-            agentKnownAssociates.text = currentAgent.knownAssociates
-            agentOccupation.text = currentAgent.occupation
-            agentLanguagesKnown.text = currentAgent.languagesSpoken
-        default:
-            print("Somethhing went bad")
-        }
+        agentName.text = agent.name
+        agentLastKnownLocation.text = agent.lastKnownLocation
+        agentKnownAssociates.text = agent.knownAssociates
+        agentOccupation.text = agent.occupation
+        agentLanguagesKnown.text = agent.languagesSpoken
+        
+        
     }
 
     
